@@ -1,0 +1,11 @@
+
+brew install python
+python3 --version
+python3 -m venv .venv
+source .venv/bin/activate
+pip install Django
+django-admin startproject portfolio-django
+python manage.py runserver
+deactivate
+python app.py
+pip freeze > requirements.txt

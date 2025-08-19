@@ -1,0 +1,42 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+media/
+
+# If you use Django migrations cache
+*/migrations/__pycache__/
+*/migrations/*.pyc
+
+# VS Code settings
+.vscode/
+
+# Mac OS files
+.DS_Store
+
+# PyCharm / JetBrains
+.idea/
+
+# Node (if you use npm/yarn for frontend)
+node_modules/
+
+# Static files (if using collectstatic for deployment)
+staticfiles/
+static_root/
+
+# Secrets
+.env
+*.env
