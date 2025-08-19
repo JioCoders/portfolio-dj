@@ -88,3 +88,12 @@ Add a screenshot of your portfolio here
 📜 License
 
 This project is licensed under the MIT License – feel free to use and modify it.
+
+👨‍💻 Author
+
+Jiocoders
+🔗 GitHub | Portfolio
+
+---
+
+👉 Lator on also include a **GitHub Actions workflow (`deploy.yml`)** so app will auto-deploys to Render every time after push code.
