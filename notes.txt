@@ -8,4 +8,12 @@ django-admin startproject portfolio-django
 python manage.py runserver
 deactivate
 python app.py
+
+pip install whitenoise
 pip freeze > requirements.txt
+python manage.py collectstatic
+
+# deploy - Build cmd
+pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
+# deploy - Start cmd
+gunicorn portfolio_dj.wsgi
