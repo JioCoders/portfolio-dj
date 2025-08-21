@@ -1,5 +1,5 @@
 """
-URL configuration for portfolio_dj project.
+URL configuration for tweeter_dj project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -14,24 +14,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import include, path
-from . import views
 
-# from django.conf.urls.static import static
-# from django.conf import settings
-# Serve static files during development
-    
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),  # Default route to home view
-    path('contact/', views.contact, name='contact'),
-    path('about/', views.about, name='about'),
-    
+    path('tweets/', include('tweet.urls')),  # Include URLs from the tweet app
+        
     # Keep this in last line
     # path('__reload__/', include('django_browser_reload.urls')),  # For live reloading during development
-]
+] 
 
-# if settings.DEBUG:
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,13 +1,21 @@
-
+============Python============
 brew install python
 python3 --version
+
 python3 -m venv .venv
 source .venv/bin/activate
-pip install Django
-django-admin startproject portfolio-django
-python manage.py runserver
 deactivate
+pip install Django
+
+django-admin startproject portfolio-django
+python manage.py startapp portfolio
+python manage.py runserver
+
+pip install flask
 python app.py
+
+python manage.py migrate
+python manage.py createsuperuser
 
 pip install whitenoise
 pip freeze > requirements.txt
