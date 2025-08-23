@@ -6,30 +6,31 @@ Jiocoders Tweets
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center mt-4">Welcome to the Tweeter App</h1>
-<p class="text-center">This is the index page.</p>
+    <h1 class="text-center mt-4">Welcome to the Tweeter App</h1>
+    <p class="text-center">This is the index page.</p>
 
-<!-- <a href="{% url 'tweet_list' %}" class="btn btn-primary">View Tweets</a>
-<a href="{% url 'tweet_create' %}" class="btn btn-success">Create Tweet</a>
-{% if tweets %}
-    <ul class="list-group mt-4">
-        {% for tweet in tweets %}
-            <li class="list-group-item">
-                <strong>{{ tweet.user.username }}:</strong> {{ tweet.content }}
-                <a href="{% url 'tweet_delete' tweet.id %}" class="btn btn-danger btn-sm float-right">Delete</a>
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p class="text-center mt-4">No tweets available.</p>
-{% endif %}
+    <a href="{% url 'tweet_list' %}" class="btn btn-primary">View Tweets</a>
+    <a href="{% url 'tweet_create' %}" class="btn btn-success">Create Tweet</a>
+    {% if tweets %}
+        <ul class="list-group mt-4">
+            {% for tweet in tweets %}
+                <li class="list-group-item">
+                    <strong>{{ tweet.user.username }}:</strong> {{ tweet.content }}
+                    <a href="{% url 'tweet_delete' tweet.id %}" class="btn btn-danger btn-sm float-right">Delete</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-center mt-4">No tweets available.</p>
+    {% endif %}
 
-{% if user.is_authenticated %}
-    <p class="text-center mt-4">Logged in as: {{ user.username }}</p>
-{% else %}
-    <p class="text-center mt-4">You are not logged in.</p>
-{% endif %} -->
-
-<!-- {% block scripts %} -->
+    {% if user.is_authenticated %}
+        <p class="text-center mt-4">Logged in as: {{ user.username }}</p>
+    {% else %}
+        <p class="text-center mt-4">You are not logged in.</p>
+    {% endif %} 
 
 {% endblock %}
+
+<!-- {% block scripts %} -->
+<!-- {% endblock %} -->
