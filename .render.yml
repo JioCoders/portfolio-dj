@@ -7,8 +7,8 @@ services:
       python manage.py collectstatic --noinput
       python manage.py migrate
     startCommand: gunicorn portfolio_dj.wsgi:application --bind 0.0.0.0:$PORT
-    envVars:
-      - key: DJANGO_SECRET_KEY
-        generateValue: true
-      - key: DJANGO_DEBUG
-        value: False
+    # envVars:
+    #   - key: DJANGO_SECRET_KEY
+    #     generateValue: true
+    #   - key: DJANGO_DEBUG
+    #     value: False
