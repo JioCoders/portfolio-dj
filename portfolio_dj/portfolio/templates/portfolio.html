@@ -1,14 +1,12 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <title>JioCoders | Portfolio</title>
+{% block title %}
+JioCoders | Portfolio
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
-</head>
+{% endblock %}
 
-<body>
+{% block content %}
 
     <header>
         <h1>JioCoders Portfolio</h1>
@@ -116,6 +114,4 @@
 
     <!-- JS -->
     <script src="{% static 'js/portfolio.js' %}"></script>
-</body>
-
-</html>
+{% endblock %} 
