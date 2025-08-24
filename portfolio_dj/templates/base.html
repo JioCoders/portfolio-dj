@@ -1,8 +1,8 @@
-<!-- File: tweeter_dj/templates/index.html -->
+<!-- File: portfolio_dj/templates/index.html -->
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,21 @@
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
     <Title>
-        {% block title %}
-        Jiocoders Tweets
-        {% endblock %}
+        {% block title %}Jiocoders Portfolio{% endblock %}
     </Title>
+
+    {% block extra_css %}{% endblock %}
 </head>
 
 <body>
+    <!-- Header -->
+    {% block header %}
+    <header>
+        <h1>JioCoders Portfolio</h1>
+        <p>Sr. Software Engineer @ HCL Info Pvt Ltd</p>
+    </header>
+    {% endblock %}
+
     <div class="container">
         {% block content %}
         <!-- Content will be injected here -->
@@ -25,6 +33,16 @@
 
         <!-- Example content -->
     </div>
+
+    <!-- Footer -->
+    {% block footer %}
+    <footer>
+        <p>&copy; 2024 JioCoders. All rights reserved.</p>
+    </footer>
+    {% endblock %}
+
+    <!-- JavaScript -->
+    {% block extra_js %}{% endblock %}
 </body>
 
 </html>
