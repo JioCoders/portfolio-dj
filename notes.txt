@@ -26,3 +26,4 @@ python manage.py collectstatic
 pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
 # deploy - Start cmd
 gunicorn portfolio_dj.wsgi
+https://portfolio-dj-0gew.onrender.com/
