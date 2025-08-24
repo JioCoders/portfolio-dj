@@ -21,14 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0*=(r*wqvi&c8kd3$j81mp=5km7d#6ywehy##1xr*7g=p^4xx2'
+# SECRET_KEY = 'django-insecure-0*=(r*wqvi&c8kd3$j81mp=5km7d#6ywehy##1xr*7g=p^4xx2'
 # Use environment variables for sensitive settings
 # Uncomment the line below to use an environment variable for the secret key
-# SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-secret-key")  
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-secret-key")  
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
-DEBUG = "True"
+DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
 
 # This should be set to the actual domain in production
 ALLOWED_HOSTS = ["portfolio-dj-0gew.onrender.com", "localhost", "127.0.0.1"]
