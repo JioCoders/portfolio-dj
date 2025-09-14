@@ -9,7 +9,7 @@ pip install Django
 
 django-admin startproject portfolio-django
 python manage.py startapp portfolio
-python manage.py runserver
+python manage.py runserver 8081
 
 pip install flask
 python app.py

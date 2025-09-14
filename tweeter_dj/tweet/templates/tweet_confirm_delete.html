@@ -6,6 +6,12 @@ Jiocoders Tweets
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center mt-4">Welcome to the Tweeter App</h1>
-<p class="text-center">This is the index page.</p>
+<h1 class="text-center mt-4">Are you sure you want to delete the tweet?</h1>
+<form method="post" class="form">
+    {% csrf_token %}
+    <p><strong>{{ tweet.content }}</strong></p>
+    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+    <a href="{% url 'tweet_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+
 {% endblock %}

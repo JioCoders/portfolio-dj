@@ -21,11 +21,11 @@ def tweet_create(request):
             return redirect('tweet_list')
     else:
         form = TweetForm()
-    return render(request, 'tweet/tweet_form.html', {'form': form})
+    return render(request, 'tweet_form.html', {'form': form})
 
 def tweet_detail(request, pk):
     tweet = get_object_or_404(Tweet, pk=pk)
-    return render(request, 'tweet/tweet_detail.html', {'tweet': tweet})
+    return render(request, 'tweet_detail.html', {'tweet': tweet})
 
 def tweet_edit(request, pk):
     tweet = get_object_or_404(Tweet, pk=pk)
@@ -36,11 +36,11 @@ def tweet_edit(request, pk):
             return redirect('tweet_detail', pk=tweet.pk)
     else:
         form = TweetForm(instance=tweet)
-    return render(request, 'tweet/tweet_form.html', {'form': form})
+    return render(request, 'tweet_form.html', {'form': form})
 
 def tweet_delete(request, pk):
     tweet = get_object_or_404(Tweet, pk=pk)
     if request.method == 'POST':
         tweet.delete()
         return redirect('tweet_list')
-    return render(request, 'tweet/tweet_confirm_delete.html', {'tweet': tweet})
+    return render(request, 'tweet_confirm_delete.html', {'tweet': tweet})
