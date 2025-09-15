@@ -130,3 +130,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# User registration settings
+REGITRATION_OPEN = True  # Set to False to close registration
+
+LOGIN_URL = '/accounts/login'
+
+
+# Redirect URLs after login/logout
+LOGIN_REDIRECT_URL = 'tweet_list'  # Redirect to tweet list after login
+LOGOUT_REDIRECT_URL = 'tweet_list'  # Redirect to tweet list after logout

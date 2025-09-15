@@ -16,6 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.contrib.auth.urls import views as auth_views
 from django.urls import include, path
 
 from django.conf import settings
@@ -24,6 +25,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tweets/', include('tweet.urls')),  # Include URLs from the tweet app
+    path('accounts/', include('django.contrib.auth.urls')),
         
     # Keep this in last line
     # path('__reload__/', include('django_browser_reload.urls')),  # For live reloading during development

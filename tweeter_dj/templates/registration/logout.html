@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+<!-- {% load static %} -->
+
+{% block title %}
+Tweets Logout
+{% endblock %}
+
+{% block content %}
+<h2 class="text-center mt-4">Logged out</h2>
+
+<p>You have been successfully logged out.</p>
+<a href="{% url 'login' %}" class="btn btn-link">Login here</a>
+</p>
+{% endblock %}

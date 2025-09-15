@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+<!-- {% load static %} -->
+
+{% block title %}
+Tweets Register
+{% endblock %}
+
+{% block content %}
+<h2 class="text-center mt-4">Register Form</h2>
+<form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-warning">Register</button>
+</form>
+<p>Already have an account?
+    <a href="{% url 'login' %}" class="btn btn-link">Login here</a>
+</p>
+{% endblock %}
