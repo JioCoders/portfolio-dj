@@ -38,5 +38,5 @@ staticfiles/
 static_root/
 
 # Secrets
-.env
-*.env
+#.env
+#*.env
